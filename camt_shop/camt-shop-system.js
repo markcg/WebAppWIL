@@ -3,7 +3,7 @@ var home = {
         $(document).ready(function () {
             $.ajax({
                 method: "POST",
-                url: "/connect.php",
+                url: "./connect.php",
                 data: {function_: "keyword"},
                 dataType: "json",
                 error: function (xhr, err) {
@@ -29,7 +29,7 @@ function search_by_keyword() {
     $('#products').empty();
     $.ajax({
         method: "POST",
-        url: "/connect.php",
+        url: "./connect.php",
         data: {function_: "product_by_keyword", keyword: $('#search').val()},
         dataType: "json",
         error: function (xhr, err) {
